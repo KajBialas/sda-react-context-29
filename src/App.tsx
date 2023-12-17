@@ -12,28 +12,36 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 import { CounterProvider } from "./context/CounterContext";
+import { BlogProvider } from "./context/BlogContext";
 
 
 
 function App() {
 
   return (
-    <CounterProvider>
-      <Router>
-            <Header />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/:id" element={<PostDetails />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/counter" element={<Counter />} />
-            </Routes>
-            <Footer />
-          </Router>
-    </CounterProvider>
+    <BlogProvider>
+      <CounterProvider>
+            <Router>
+                  <Header />
+                  <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/blog" element={<Blog />} />
+                    <Route path="/blog/:id" element={<PostDetails />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/counter" element={<Counter />} />
+                  </Routes>
+                  <Footer />
+                </Router>
+          </CounterProvider>
+    </BlogProvider>
+    
     
   );
 }
+
+
+// Wdrozyc context dla countera
+// Dodaj context z listą postów bloga
 
 export default App;

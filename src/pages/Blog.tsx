@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { API_URL } from '../constants/api';
+import { useBlog } from '../context/BlogContext';
 
 export type Post = {
     title: string;
@@ -9,13 +10,7 @@ export type Post = {
 }
 
 const Blog = () => {
-    const [posts, setPosts] = useState<Post[]>([]);
-
-    useEffect(() => {
-        fetch(API_URL)
-            .then(response => response.json())
-            .then(data => setPosts(data));
-    }, []);
+    const { posts } = useBlog();
 
     return (
         <div>
