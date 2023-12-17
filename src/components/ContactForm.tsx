@@ -5,6 +5,7 @@ const INIT_STATE = {
     email: '',
     message: ''
 }
+
 const ContactForm = () => {
     const [formData, setFormData] = useState(INIT_STATE);
 

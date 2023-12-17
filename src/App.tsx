@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import Counter from "./pages/Counter";
+import PostDetails from "./pages/PostDetails";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -21,6 +22,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<PostDetails />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/counter" element={<Counter />} />
       </Routes>
