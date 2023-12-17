@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
@@ -11,20 +12,31 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 
-// 1. Utwórz komponent Nav zawierający linki do wszystkich podstron, osadzony w Header
-// 2. Utwórz podstronę Counter, obsługującą mozliwość zwiększania, zmniejszania oraz resetowania stanu licznika
 
 function App() {
+  const [counter, setCounter] = useState(0);
+
+  const handleIncrementCounter = () => setCounter(prevCounter => prevCounter + 1);
+  const handleDecrementCounter = () => setCounter(prevCounter => prevCounter - 1);
+  const handleResetCounter = () => setCounter(0);
+
   return (
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home counter={counter} />} />
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<PostDetails />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/counter" element={<Counter />} />
+        <Route path="/counter" element={
+          <Counter 
+            counter={counter} 
+            handleIncrementCounter={handleIncrementCounter}  
+            handleDecrementCounter={handleDecrementCounter}
+            handleResetCounter={handleResetCounter}
+          />
+        } />
       </Routes>
       <Footer />
     </Router>

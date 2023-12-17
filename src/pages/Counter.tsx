@@ -1,14 +1,19 @@
 import { useState } from 'react';
 
-const Counter = () => {
-    const [counter, setCounter] = useState(0);
+type CounterProps = {
+    counter: number;
+    handleIncrementCounter: () => void;
+    handleDecrementCounter: () => void;
+    handleResetCounter: () => void;
+}
 
+const Counter = ({ counter, handleIncrementCounter, handleDecrementCounter, handleResetCounter }: CounterProps) => {
     return (
         <div>
             <h1>Counter: {counter}</h1>
-            <button onClick={() => setCounter(counter + 1)}>ZWIĘKSZ</button>
-            <button onClick={() => setCounter(counter - 1)}>ZMNIEJSZ</button>
-            <button onClick={() => setCounter(0)}> RESET</button>
+            <button onClick={handleIncrementCounter}>ZWIĘKSZ</button>
+            <button onClick={handleDecrementCounter}>ZMNIEJSZ</button>
+            <button onClick={handleResetCounter}> RESET</button>
         </div>
     )
 }

@@ -1,7 +1,10 @@
-const Home = () => {
+type HomeProps = {
+    counter: number;
+}
+const Home = ({counter}: HomeProps) => {
     return (
         <div>
-            Home
+            Home: {counter}
         </div>
     )
 }
