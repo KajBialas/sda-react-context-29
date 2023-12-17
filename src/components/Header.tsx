@@ -1,8 +1,11 @@
+import Nav from "./Nav";
+
 const Header = () => {
     return (
-        <div>
-            Header
-        </div>
+        <header>
+            <h1>Moja aplikacja</h1>
+            <Nav />
+        </header>
     )
 }
 
