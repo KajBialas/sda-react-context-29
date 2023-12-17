@@ -1,13 +1,9 @@
-import { useState } from 'react';
+import { useCounter } from '../context/CounterContext';
 
-type CounterProps = {
-    counter: number;
-    handleIncrementCounter: () => void;
-    handleDecrementCounter: () => void;
-    handleResetCounter: () => void;
-}
 
-const Counter = ({ counter, handleIncrementCounter, handleDecrementCounter, handleResetCounter }: CounterProps) => {
+const Counter = () => {
+    const { counter, handleIncrementCounter, handleDecrementCounter, handleResetCounter } = useCounter();
+
     return (
         <div>
             <h1>Counter: {counter}</h1>

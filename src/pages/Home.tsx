@@ -1,7 +1,7 @@
-type HomeProps = {
-    counter: number;
-}
-const Home = ({counter}: HomeProps) => {
+import { useCounter } from "../context/CounterContext";
+const Home = () => {
+    const { counter } = useCounter();
+    
     return (
         <div>
             Home: {counter}
