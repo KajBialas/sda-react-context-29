@@ -17,7 +17,7 @@ import { BlogProvider } from "./context/blog/BlogContext";
 
 // Zadanie 5
 // 1. Dodać obsługę błedów w PostDetails oraz Blog
-// 2. Ostylowac szczegoly postu oraz formularze
+
 
 
 function App() {
