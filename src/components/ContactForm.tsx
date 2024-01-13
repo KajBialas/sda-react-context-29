@@ -1,4 +1,4 @@
-import { useState, ChangeEvent, FormEvent  } from "react";
+import { useState, FormEvent  } from "react";
 
 const INIT_STATE = {
     fullName: '',

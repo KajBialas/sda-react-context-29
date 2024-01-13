@@ -7,6 +7,7 @@ import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import Counter from "./pages/Counter";
 import PostDetails from "./pages/PostDetails";
+import AddPost from "./pages/AddPost";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -14,7 +15,9 @@ import Footer from "./components/Footer";
 import { CounterProvider } from "./context/CounterContext";
 import { BlogProvider } from "./context/BlogContext";
 
-
+// Zadanie 1 
+// 1. Utwórz nową podstronę: "Dodaj posta"
+// 2. Zbuduj formularz który będzie słuzył do dodawania postów
 
 function App() {
 
@@ -28,6 +31,7 @@ function App() {
                     <Route path="/about" element={<About />} />
                     <Route path="/blog" element={<Blog />} />
                     <Route path="/blog/:id" element={<PostDetails />} />
+                    <Route path="/add-post" element={<AddPost />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/counter" element={<Counter />} />
                   </Routes>
