@@ -23,6 +23,9 @@ const Nav = () => {
                 <li className={styles.navigationListElement}>
                     <Link to="/counter" >Counter</Link>
                 </li>
+                <li className={styles.navigationListElement}>
+                    <Link to="/spotify" >Spotify</Link>
+                </li>
             </ul>
         </nav>
     )

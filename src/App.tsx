@@ -8,6 +8,7 @@ import Contact from "./pages/contact/Contact";
 import Counter from "./pages/counter/Counter";
 import PostDetails from "./pages/postDetails/PostDetails";
 import AddPost from "./pages/addPost/AddPost";
+import Spotify from "./pages/spotify/Spotify";
 
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
@@ -35,6 +36,7 @@ function App() {
                     <Route path="/add-post" element={<AddPost />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/counter" element={<Counter />} />
+                    <Route path="/spotify" element={<Spotify />} />
                   </Routes>
                   <Footer />
                 </Router>
