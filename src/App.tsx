@@ -15,8 +15,9 @@ import Footer from "./components/footer/Footer";
 import { CounterProvider } from "./context/counter/CounterContext";
 import { BlogProvider } from "./context/blog/BlogContext";
 
-// Zadanie 3
-// 1. Wykorzystaj CSS modules, zeby ostylowac: Nagłowek strony oraz listę postów
+// Zadanie 4
+// 1. Wdrozyc strukture katalogow
+// 2. Ostylowac szczegoly postu oraz formularze
 
 
 function App() {

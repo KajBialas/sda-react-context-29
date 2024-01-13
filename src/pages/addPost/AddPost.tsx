@@ -1,5 +1,6 @@
 import { useState, FormEvent  } from "react";
 import { useBlog } from "../../context/blog/BlogContext";
+import styles from './addPost.style.module.css';
 
 const INIT_STATE = {
     id: '',
@@ -26,7 +27,7 @@ const AddPost = () => {
     }
 
     return (
-        <div>
+        <div className={styles.addPostContainer}>
             <h1>Dodaj nowego posta</h1>
             <form onSubmit={handleSubmit}>
                 <div>

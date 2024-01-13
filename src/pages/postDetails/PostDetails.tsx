@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import { API_URL } from '../../constants/api';
 import { Post } from '../blog/Blog';
+import styles from './postDetails.style.module.css';
 
 const PostDetails = () => {
     const { id } = useParams();
@@ -13,13 +14,10 @@ const PostDetails = () => {
             .then(data => setPostDetails(data))
     }, [id]);
 
-    return (<div>
-        <h1>Szczegóły postu: </h1>
-        <div>
-            <h2>{postDetails && postDetails.title}</h2>
+    return (<section className={styles.postDetailsContainer}>
+            <h1 className={styles.postDetailsTitle}>{postDetails && postDetails.title}</h1>
             <p>{postDetails && postDetails.body}</p>
-        </div>
-    </div>)
+    </section>)
 }
 
 export default PostDetails;
