@@ -11,8 +11,15 @@ export type Post = {
 }
 
 const Blog = () => {
-    const { posts } = useBlog();
+    const { posts, isLoading, error } = useBlog();
 
+    if (isLoading) {
+        return (<div>Ładowanie danych:</div>)
+    }
+
+    if (error) {
+        return (<div>Błąd pobierania danych</div>)
+    }
     return (
         <section className={styles.blogPostSection}>
             <h1>Posty bloga:</h1>

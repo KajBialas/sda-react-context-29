@@ -9,6 +9,8 @@ export type Post = {
 export type BlogContextType = {
     posts: Post[];
     addPost: (newPost: Post) => void;
+    isLoading: boolean;
+    error: string | null;
 }
 
 const BlogContext = createContext<BlogContextType | undefined>(undefined);
@@ -28,11 +30,31 @@ export const useBlog = () => {
 
 export const BlogProvider = ({children}: BlogProviderProps) => {
     const [posts, setPosts] = useState<Post[]>([]);
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
+
 
     useEffect(() => {
-        fetch(API_URL)
-            .then(response => response.json())
-            .then(data => setPosts(data));
+        const fetchData = async () => {
+            try {
+                const response = await fetch(API_URL);
+
+                if (!response.ok) {
+                    throw new Error('HTTP error');
+                }
+
+                const data = await response.json();
+                setPosts(data);
+
+            } catch (error) {
+                setError('Error');
+            } finally {
+                setIsLoading(false);
+            }
+        }
+
+        fetchData();
+
     }, []);
 
     const addPost = (newPost: Post) => {
@@ -41,7 +63,7 @@ export const BlogProvider = ({children}: BlogProviderProps) => {
     }
 
     return (
-        <BlogContext.Provider value={{posts, addPost}}>
+        <BlogContext.Provider value={{posts, addPost, isLoading, error}}>
             {children}
         </BlogContext.Provider>)
 }

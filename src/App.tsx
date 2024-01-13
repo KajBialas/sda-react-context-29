@@ -15,8 +15,8 @@ import Footer from "./components/footer/Footer";
 import { CounterProvider } from "./context/counter/CounterContext";
 import { BlogProvider } from "./context/blog/BlogContext";
 
-// Zadanie 4
-// 1. Wdrozyc strukture katalogow
+// Zadanie 5
+// 1. Dodać obsługę błedów w PostDetails oraz Blog
 // 2. Ostylowac szczegoly postu oraz formularze
 
 
