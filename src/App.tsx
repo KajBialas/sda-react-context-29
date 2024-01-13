@@ -15,8 +15,8 @@ import Footer from "./components/footer/Footer";
 import { CounterProvider } from "./context/counter/CounterContext";
 import { BlogProvider } from "./context/blog/BlogContext";
 
-// Zadanie 5
-// 1. Dodać obsługę błedów w PostDetails oraz Blog
+// Zadanie 6
+// 1. Zaimplementuj stronę: Spotify, gdzie będzie moliwość odtwarzania muzyki
 
 
 
