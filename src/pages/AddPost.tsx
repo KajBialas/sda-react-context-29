@@ -10,7 +10,7 @@ const INIT_STATE = {
 const AddPost = () => {
     const [formData, setFormData] = useState(INIT_STATE);
     const { addPost } = useBlog();
-    
+
     const handleChange = (e: FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { value, name } = e.target as HTMLInputElement | HTMLTextAreaElement;
         setFormData(prevState => ({
@@ -21,7 +21,7 @@ const AddPost = () => {
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        console.log('add post', formData);
+        addPost(formData);
         setFormData(INIT_STATE);
     }
 

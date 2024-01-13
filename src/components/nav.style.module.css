@@ -1,0 +1,12 @@
+.navigation {
+    background: gray;
+}
+
+.navigationList {
+    list-style-type: none;
+}
+
+.navigationListElement {
+    display: inline-block;
+    margin: 10px;
+}
