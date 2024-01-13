@@ -1,4 +1,5 @@
 import { useState, FormEvent  } from "react";
+import { useBlog } from "../context/BlogContext";
 
 const INIT_STATE = {
     id: '',
@@ -8,7 +9,8 @@ const INIT_STATE = {
 
 const AddPost = () => {
     const [formData, setFormData] = useState(INIT_STATE);
-
+    const { addPost } = useBlog();
+    
     const handleChange = (e: FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { value, name } = e.target as HTMLInputElement | HTMLTextAreaElement;
         setFormData(prevState => ({

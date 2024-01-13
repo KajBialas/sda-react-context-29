@@ -15,9 +15,9 @@ import Footer from "./components/Footer";
 import { CounterProvider } from "./context/CounterContext";
 import { BlogProvider } from "./context/BlogContext";
 
-// Zadanie 1 
-// 1. Utwórz nową podstronę: "Dodaj posta"
-// 2. Zbuduj formularz który będzie słuzył do dodawania postów
+// Zadanie 2
+// 1. Wyswietl dodane post na liście postów
+
 
 function App() {
 

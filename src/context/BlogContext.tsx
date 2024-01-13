@@ -8,6 +8,7 @@ export type Post = {
 
 export type BlogContextType = {
     posts: Post[];
+    addPost: (newPost: Post) => void;
 }
 
 const BlogContext = createContext<BlogContextType | undefined>(undefined);
@@ -34,8 +35,13 @@ export const BlogProvider = ({children}: BlogProviderProps) => {
             .then(data => setPosts(data));
     }, []);
 
+    const addPost = (newPost: Post) => {
+        setPosts(prevPosts => [newPost, ...prevPosts]);
+        // setPosts([newPost, ...posts]);
+    }
+
     return (
-        <BlogContext.Provider value={{posts}}>
+        <BlogContext.Provider value={{posts, addPost}}>
             {children}
         </BlogContext.Provider>)
 }
