@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext, createContext } from "react";
-import { API_URL } from "../constants/api";
+import { API_URL } from "../../constants/api";
 export type Post = {
     title: string;
     id: string;

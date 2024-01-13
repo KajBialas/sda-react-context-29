@@ -1,22 +1,22 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Blog from "./pages/Blog";
-import Contact from "./pages/Contact";
-import Counter from "./pages/Counter";
-import PostDetails from "./pages/PostDetails";
-import AddPost from "./pages/AddPost";
+import Home from "./pages/home/Home";
+import About from "./pages/about/About";
+import Blog from "./pages/blog/Blog";
+import Contact from "./pages/contact/Contact";
+import Counter from "./pages/counter/Counter";
+import PostDetails from "./pages/postDetails/PostDetails";
+import AddPost from "./pages/addPost/AddPost";
 
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
 
-import { CounterProvider } from "./context/CounterContext";
-import { BlogProvider } from "./context/BlogContext";
+import { CounterProvider } from "./context/counter/CounterContext";
+import { BlogProvider } from "./context/blog/BlogContext";
 
-// Zadanie 2
-// 1. Wyswietl dodane post na liście postów
+// Zadanie 3
+// 1. Wykorzystaj CSS modules, zeby ostylowac: Nagłowek strony oraz listę postów
 
 
 function App() {

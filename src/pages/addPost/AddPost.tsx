@@ -1,5 +1,5 @@
 import { useState, FormEvent  } from "react";
-import { useBlog } from "../context/BlogContext";
+import { useBlog } from "../../context/blog/BlogContext";
 
 const INIT_STATE = {
     id: '',

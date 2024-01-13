@@ -1,0 +1,19 @@
+.blogPostContainer {
+    width: 300px;
+    background: gray;
+    padding: 20px;
+}
+
+.blogPostList {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.blogPostTitle {
+    color: #fff;
+}
+
+.blogPostSection {
+    padding: 20px;
+}

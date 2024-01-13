@@ -1,4 +1,4 @@
-import { useCounter } from "../context/CounterContext";
+import { useCounter } from "../../context/counter/CounterContext";
 const Home = () => {
     const { counter } = useCounter();
     

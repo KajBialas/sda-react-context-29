@@ -9,19 +9,19 @@ const Nav = () => {
                     <Link to="/">Home</Link>
                 </li>
                 <li className={styles.navigationListElement}>
-                    <Link to="/about">About</Link>
+                    <Link to="/about" >About</Link>
                 </li>
                 <li className={styles.navigationListElement}>
-                    <Link to="/blog">Blog</Link>
+                    <Link to="/blog" >Blog</Link>
                 </li>    
                 <li className={styles.navigationListElement}>
-                    <Link to="/add-post">Add post</Link>
+                    <Link to="/add-post" >Add post</Link>
                 </li>
                 <li className={styles.navigationListElement}>
-                    <Link to="/contact">Contact</Link>
+                    <Link to="/contact" >Contact</Link>
                 </li>    
                 <li className={styles.navigationListElement}>
-                    <Link to="/counter">Counter</Link>
+                    <Link to="/counter" >Counter</Link>
                 </li>
             </ul>
         </nav>

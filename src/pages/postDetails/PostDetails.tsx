@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
-import { API_URL } from '../constants/api';
-import { Post } from './Blog';
+import { API_URL } from '../../constants/api';
+import { Post } from '../blog/Blog';
 
 const PostDetails = () => {
     const { id } = useParams();
